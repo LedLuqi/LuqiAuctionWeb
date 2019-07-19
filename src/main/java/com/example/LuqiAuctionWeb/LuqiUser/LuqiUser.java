@@ -10,20 +10,21 @@ public class LuqiUser {
     @Id
     @GeneratedValue
     private Long id;
-    private String luqiLogin;
-    private String luqiPassword;
-    private String luqiRole;
-    private String luqiName;
-    private String luqiSurname;
-    private String luqiAge;
-    private String luqiStreet;
-    private String luqiLocal;
-    private String luqiCodePost;
+    private String luqirole;
+    private String luqilogin;
+    private String luqipassword;
+    private String luqiname;
+    private String luqisurname;
+    private String luqiage;
+    private String luqistreet;
+    private String luqilocal;
+    private String luqicodePost;
     private boolean enabled;
 
     public LuqiUser() {
         this.enabled = true;
     }
+
 
     public Long getId() {
         return id;
@@ -33,76 +34,76 @@ public class LuqiUser {
         this.id = id;
     }
 
-    public String getLuqiLogin() {
-        return luqiLogin;
+    public String getLuqilogin() {
+        return luqilogin;
     }
 
-    public void setLuqiLogin(String luqiLogin) {
-        this.luqiLogin = luqiLogin;
+    public void setLuqilogin(String luqilogin) {
+        this.luqilogin = luqilogin;
     }
 
-    public String getLuqiPassword() {
-        return luqiPassword;
+    public String getLuqipassword() {
+        return luqipassword;
     }
 
-    public void setLuqiPassword(String luqiPassword) {
-        this.luqiPassword = luqiPassword;
+    public void setLuqipassword(String luqipassword) {
+        this.luqipassword = luqipassword;
     }
 
-    public String getLuqiName() {
-        return luqiName;
+    public String getLuqirole() {
+        return luqirole;
     }
 
-    public void setLuqiName(String luqiName) {
-        this.luqiName = luqiName;
+    public void setLuqirole(String luqirole) {
+        this.luqirole = luqirole;
     }
 
-    public String getLuqiSurname() {
-        return luqiSurname;
+    public String getLuqiname() {
+        return luqiname;
     }
 
-    public void setLuqiSurname(String luqiSurname) {
-        this.luqiSurname = luqiSurname;
+    public void setLuqiname(String luqiname) {
+        this.luqiname = luqiname;
     }
 
-    public String getLuqiAge() {
-        return luqiAge;
+    public String getLuqisurname() {
+        return luqisurname;
     }
 
-    public void setLuqiAge(String luqiAge) {
-        this.luqiAge = luqiAge;
+    public void setLuqisurname(String luqisurname) {
+        this.luqisurname = luqisurname;
     }
 
-    public String getLuqiStreet() {
-        return luqiStreet;
+    public String getLuqiage() {
+        return luqiage;
     }
 
-    public void setLuqiStreet(String luqiStreet) {
-        this.luqiStreet = luqiStreet;
+    public void setLuqiage(String luqiage) {
+        this.luqiage = luqiage;
     }
 
-    public String getLuqiLocal() {
-        return luqiLocal;
+    public String getLuqistreet() {
+        return luqistreet;
     }
 
-    public void setLuqiLocal(String luqiLocal) {
-        this.luqiLocal = luqiLocal;
+    public void setLuqistreet(String luqistreet) {
+        this.luqistreet = luqistreet;
     }
 
-    public String getLuqiCodePost() {
-        return luqiCodePost;
+    public String getLuqilocal() {
+        return luqilocal;
     }
 
-    public void setLuqiCodePost(String luqiCodePost) {
-        this.luqiCodePost = luqiCodePost;
+    public void setLuqilocal(String luqilocal) {
+        this.luqilocal = luqilocal;
     }
 
-    public String getLuqiRole() {
-        return luqiRole;
+    public String getLuqicodePost() {
+        return luqicodePost;
     }
 
-    public void setLuqiRole(String luqiRole) {
-        this.luqiRole = luqiRole;
+    public void setLuqicodePost(String luqicodePost) {
+        this.luqicodePost = luqicodePost;
     }
 
     public boolean isEnabled() {
