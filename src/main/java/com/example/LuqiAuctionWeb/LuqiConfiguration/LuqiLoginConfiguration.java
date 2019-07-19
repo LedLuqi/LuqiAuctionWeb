@@ -35,6 +35,6 @@ public class LuqiLoginConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .and().authorizeRequests().anyRequest().authenticated()
              // .antMatchers("/mainpage", "/product").hasAnyRole("USER")
-                .and().formLogin().defaultSuccessUrl("/Mainpage.html");
+                .and().formLogin().defaultSuccessUrl("/templates/MainPage.html");
     }
 }

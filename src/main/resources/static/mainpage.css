@@ -1,0 +1,70 @@
+body{
+    background-color: black;
+}
+.container-fluid{
+
+}
+.head{
+    color: #333333;
+    background-color: #cd853f;
+    height: 70px;
+}
+.logo{
+    font-size: 30px;
+    font-style: initial;
+    color: #333333;
+}
+.serch{
+    padding: 10px;
+}
+.icona{
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    color: #f4edaa;
+}
+.icona:hover{
+    color: #000000;
+    background-color: #f4edaa;
+}
+.link{
+    color: #333333;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.link:hover{
+    color: #000000;
+    text-decoration: none;
+}
+.search{
+    float: left;
+    border-bottom-style: solid;
+    border-color: #333333;
+}
+.cont{
+    height: 600px;
+}
+.info{
+    color: #333333;
+    background-color: #cd853f;
+}
+.content{
+    background-color: #cd853f;
+}
+.line{
+    border-bottom-style: solid;
+    border-color: #333333;
+}
+.line:hover{
+    border-color: #000000;
+}
+.find{
+    border-bottom-style: solid;
+    border-color: #333333;
+}
+.beforefind{
+    border-bottom-style: solid;
+    border-color: #333333;
+}
