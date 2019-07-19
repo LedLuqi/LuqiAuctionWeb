@@ -19,12 +19,18 @@ public class LuqiLoginConfiguration extends WebSecurityConfigurerAdapter {
         try {
             auth.jdbcAuthentication()
                     .dataSource(dataSource)
-                    .authoritiesByUsernameQuery("SELECT arole\n" +
-                            "FROM luqirole WHERE luqilogin = ?")
-                    .usersByUsernameQuery("SELECT luqilogin, luqipassword, enabled FROM luqi_user WHERE luqilogin = ?");
+                    .usersByUsernameQuery("SELECT luqilogin, luqipassword, enabled FROM luqi_user WHERE luqilogin = ?")
+                    .authoritiesByUsernameQuery("SELECT luqilogin, luqirole\n" +
+                    "FROM luqi_user WHERE luqilogin = ?");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+                .antMatchers("view").hasAnyRole("USER")
+                .and().formLogin().defaultSuccessUrl("/view");
+    }
 }
