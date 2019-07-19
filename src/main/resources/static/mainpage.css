@@ -1,8 +1,9 @@
 body{
     background-color: black;
+
 }
 .container-fluid{
-
+    background-color: black;
 }
 .head{
     color: #333333;
@@ -67,4 +68,7 @@ body{
 .beforefind{
     border-bottom-style: solid;
     border-color: #333333;
+}
+.footer{
+    background-color: #333333;
 }
