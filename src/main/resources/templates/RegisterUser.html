@@ -20,10 +20,7 @@
                 <div class="col-md-2 logo icona line" style="text-align: left"><a href="MainPage.html" class="link">LedLuqi</a></div>
                 <div class="col-md-2 beforefind" ></div>
                 <div class="col-md-4 find">
-                    <form  class="serch" th:object="${search}" th:action="@{/mainpage}" th:method="post">
-                        <input type="text" style="margin-top: 12px; margin-right: 0px ;width: 100%; float: left"; th:field="*{searched}">
-                        <button type="submit">hihhhhihiihi</button>
-                    </form>
+
                 </div>
 
                 <div class="col-md-1 icona search line" style="float: left;"><i class="icon-search">Find</i></div>
@@ -35,10 +32,18 @@
             <div class="row cont">
                 <div class="col-md-3 info"></div>
                 <div class="col-md-9 content">
-                    <div th:each="product :${products}" style="color: #333333">
-                        <a th:href="${'/product?id=' + product.id}" class="link" ><p th:text="${product.nameOfProduct}"/>
-                        </a>
-                    </div>
+                    <form  class="serch" th:object="${user}" th:action="@{/registeruser}" th:method="post">
+                        <input type="text" style="margin-top: 12px; margin-right: 0px ;width: 100%; float: left"; th:field="*{luqirole}">
+                        <input type="text" style="margin-top: 12px; margin-right: 0px ;width: 100%; float: left"; th:field="*{luqilogin}">
+                        <input type="text" style="margin-top: 12px; margin-right: 0px ;width: 100%; float: left"; th:field="*{luqipassword}">
+                        <input type="text" style="margin-top: 12px; margin-right: 0px ;width: 100%; float: left"; th:field="*{luqiname}">
+                        <input type="text" style="margin-top: 12px; margin-right: 0px ;width: 100%; float: left"; th:field="*{luqisurname}">
+                        <input type="text" style="margin-top: 12px; margin-right: 0px ;width: 100%; float: left"; th:field="*{luqiage}">
+                        <input type="text" style="margin-top: 12px; margin-right: 0px ;width: 100%; float: left"; th:field="*{luqistreet}">
+                        <input type="text" style="margin-top: 12px; margin-right: 0px ;width: 100%; float: left"; th:field="*{luqilocal}">
+                        <input type="text" style="margin-top: 12px; margin-right: 0px ;width: 100%; float: left"; th:field="*{luqicodePost}">
+                        <button type="submit">hihhhhihiihi</button>
+                    </form>
                 </div>
             </div>
             <div class="row">
