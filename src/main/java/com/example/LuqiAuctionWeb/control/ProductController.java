@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-@Controller("/SaveProduct.html")
+@Controller()
 public class ProductController {
 
     @Autowired
@@ -24,6 +24,6 @@ public class ProductController {
     @PostMapping("/saveproduct")
     String saveProductToDAO(LuqiProduct product, Model model){
         productRepository.save(product);
-        return "redirect:mainpage";
+        return "redirect:/mainpage";
     }
 }

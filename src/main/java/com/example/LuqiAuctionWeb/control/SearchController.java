@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@Controller("/MainPage.html")
+@Controller()
 public class SearchController {
 
     @Autowired
@@ -23,7 +23,7 @@ public class SearchController {
         model.addAttribute("name",product.getNameOfProduct());
         model.addAttribute("content",product.getDescription());
         model.addAttribute("id",product.getId());
-        return "showproduct";
+        return "ShowProduct";
 
     }
 
@@ -31,7 +31,7 @@ public class SearchController {
     String createSearch (Model model){
         model.addAttribute("search",new Search());
         System.out.println("create");
-        return "MainPage.html";
+        return "MainPage";
     }
 
     @PostMapping("/mainpage")
