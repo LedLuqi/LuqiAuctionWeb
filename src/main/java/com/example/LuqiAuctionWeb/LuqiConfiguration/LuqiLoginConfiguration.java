@@ -34,7 +34,8 @@ public class LuqiLoginConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .and().authorizeRequests().anyRequest().authenticated()
-             // .antMatchers("/mainpage", "/product").hasAnyRole("USER")
-                .and().formLogin().defaultSuccessUrl("/templates/MainPage.html");
+                .antMatchers("/templates/RegisterUser.html","/templates/MainPage.html","/templates/ShowProduct.html").permitAll()
+                .antMatchers("/templates/MainPageLogin.html", "/templates/SaveProduct.html").hasAnyRole("USER")
+                .and().formLogin().defaultSuccessUrl("/templates/MainPageLogin.html");
     }
 }

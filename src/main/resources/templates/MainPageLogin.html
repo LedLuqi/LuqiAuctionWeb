@@ -17,30 +17,32 @@
         <div class="container-fluid">
 
             <div class="row head">
-                <div class="col-md-2 logo icona line" style="text-align: left"><a href="mainpage" class="link">LedLuqi</a></div>
+                <div class="col-md-2 logo icona line" style="text-align: left"><a href="saveproduct" class="link"><i class="icon-money">LedLuqi</i></a></div>
                 <div class="col-md-2 beforefind" ></div>
                 <div class="col-md-4 find">
-
+                    <form  class="serch" th:object="${search}" th:action="@{/mainpagelogin}" th:method="post">
+                        <input type="text" style="margin-top: 12px; margin-right: 0px ;width: 100%; float: left"; th:field="*{searched}">
+                        <button type="submit" id="ac">hihhhhihiihi</button>
+                    </form>
                 </div>
 
-                <div class="col-md-1 icona search line" style="float: left;" onclick="a"><a href="saveproduct" class="link"><i class="icon-search">Find</i></a></div>
-                <div class="col-md-1 icona search line"><a href="saveproduct" class="link"><i class="icon-basket">Buy</i></a></div>
-                <div class="col-md-1 icona search line"><a href="login" class="link"><i class="icon-login">Log</i></a></div>
-                <div class="col-md-1 icona search line"><a href="registeruser" class="link"><i class="icon-user-plus">Reg</i></a></div>
+                <div class="col-md-1 icona search line" style="float: left;" ><a href="saveproduct" class="link"><i class="icon-search">Find</i></a></div>
+                <div class="col-md-1 icona search line"><a href="mainpagelogin" class="link"><i class="icon-basket">Buy</i></a></div>
+                <div class="col-md-1 icona search line"><a href="logout" class="link"><i class="icon-logout">Out</i></a></div>
+                <div class="col-md-1 icona search line"><a href="saveproduct" class="link"><i class="icon-plus">Add</i></a></div>
             </div>
 
             <div class="row cont">
                 <div class="col-md-3 info"></div>
                 <div class="col-md-9 content">
-                    <div style="color: #333333">
-                        <p th:text="${firstName}"/>
-                        <p th:text="${content}"/>
-                        <p th:text="${id}"/>
+                    <div th:each="product :${products}" style="color: #333333">
+                        <a style="background-color: #f4edaa; height: 120px; margin: 20px" th:href="${'/productlogin?id=' + product.id}" class="showproduct link" ><p th:text="${product.nameOfProduct}"/>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="footer"></div>
+            <div class="row col-md-12 footer">
+                <div ></div>
             </div>
 
         </div>
@@ -53,5 +55,3 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
-
-</html>

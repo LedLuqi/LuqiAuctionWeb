@@ -1,5 +1,6 @@
 package com.example.LuqiAuctionWeb.control;
 
+import com.example.LuqiAuctionWeb.LuqiEncoder.LuqiEncoder;
 import com.example.LuqiAuctionWeb.LuqiUser.LuqiUser;
 import com.example.LuqiAuctionWeb.LuqiUser.LuqiUserService;
 import com.example.LuqiAuctionWeb.search.Search;
@@ -15,6 +16,9 @@ public class RegisterUserController {
     @Autowired
     LuqiUserService luqiUserService;
 
+    @Autowired
+    LuqiEncoder luqiEncoder;
+
     @GetMapping("/registeruser")
     String createSearch (Model model){
         model.addAttribute("user",new LuqiUser());
@@ -24,6 +28,8 @@ public class RegisterUserController {
 
     @PostMapping("/registeruser")
     String getProducts(LuqiUser luqiUser){
+        String password = luqiEncoder.getbCryptPasswordEncoder().encode(luqiUser.getLuqipassword());
+        luqiUser.setLuqipassword(password);
         luqiUserService.addUser(luqiUser);
         return "redirect:mainpage";
     }

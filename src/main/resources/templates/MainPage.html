@@ -26,17 +26,17 @@
                     </form>
                 </div>
 
-                <div class="col-md-1 icona search line" style="float: left;" onclick="a"><a href="saveproduct" class="link"><i class="icon-search">Find</i></a></div>
-                <div class="col-md-1 icona search line"><a href="saveproduct" class="link"><i class="icon-basket">Buy</i></a></div>
-                <div class="col-md-1 icona search line"><a href="saveproduct" class="link"><i class="icon-login">Log</i></a></div>
-                <div class="col-md-1 icona search line"><a href="saveproduct" class="link"><i class="icon-user-plus">Reg</i></a></div>
+                <div class="col-md-1 icona search line" style="float: left;"><a href="mainpage" class="link"><i class="icon-search">Find</i></a></div>
+                <div class="col-md-1 icona search line"><a href="mainpage" class="link"><i class="icon-basket">Buy</i></a></div>
+                <div class="col-md-1 icona search line"><a href="login" class="link"><i class="icon-login">Log</i></a></div>
+                <div class="col-md-1 icona search line"><a href="registeruser" class="link"><i class="icon-user-plus">Reg</i></a></div>
             </div>
 
             <div class="row cont">
                 <div class="col-md-3 info"></div>
                 <div class="col-md-9 content">
                     <div th:each="product :${products}" style="color: #333333">
-                        <a style="background-color: #f4edaa; height: 120px; margin: 20px" th:href="${'/product?id=' + product.id}" class="link" ><p th:text="${product.nameOfProduct}"/>
+                        <a style="background-color: #f4edaa; height: 120px; margin: 20px" th:href="${'/product?id=' + product.id}" class="showproduct link" ><p th:text="${product.nameOfProduct}"/>
                         </a>
                     </div>
                 </div>
